@@ -4,6 +4,7 @@ class Header extends Component {
     render() {
         return (
             <header id="header">
+              <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
               <div className="d-flex flex-column">
           
                 <div className="profile">
