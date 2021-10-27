@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Footer extends Component {
     render() {
         return (
-        <footer id="footer">
+          <footer id="footer">
             <div className="container">
               <div className="copyright">
                 &copy; Copyright <strong><span>iPortfolio</span></strong>

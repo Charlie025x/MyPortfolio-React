@@ -4,7 +4,7 @@ import ScriptTag from 'react-script-tag';
 import Header from '../components/header/header.component';
 import Hero from '../components/hero/hero.component';
 import Main from '../components/main/main.component';
-// import Footer from '../Components/Footer/Footer';
+import Footer from '../components/footer/footer.component';
 
 const Demo = props => (
   <>
@@ -29,6 +29,7 @@ class HomePage extends Component {
           <Header/>
           <Hero/>
           <Main/>
+          <Footer/>
           <Demo/>
         </>
       )

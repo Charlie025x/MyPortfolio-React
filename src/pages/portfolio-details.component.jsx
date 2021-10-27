@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ScriptTag from 'react-script-tag';
  
 import Header from '../components/header/header.component';
-// import Footer from '../Components/Footer/Footer';
+import Footer from '../components/footer/footer.component';
 
 const Demo = props => (
   <>
@@ -97,7 +97,7 @@ class PortfolioDetails extends Component {
 
           </main> {/* end main */}
 
-
+        <Footer/>
         <Demo/>
       </>
     )
