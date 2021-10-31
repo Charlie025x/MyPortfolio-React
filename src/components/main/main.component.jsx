@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import PortfolioContainer from '../portfolio-container/portfolio-container.component';
+import PortfolioSection from '../portfolio-section/portfolio-section.component';
  
 class Main extends Component {
     render() {
@@ -175,7 +175,7 @@ class Main extends Component {
             </section>
             {/* End Resume Section */}
 
-            <PortfolioContainer/>
+            <PortfolioSection/>
 
             {/* ======= Contact Section ======= */}
             <section id="contact" className="contact">

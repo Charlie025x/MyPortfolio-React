@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import PortfolioItem from '../portfolio-item/portfolio-item.component';
  
-class PortfolioContainer extends Component {
+class PortfolioSection extends Component {
     render() {
         return (
             <>
@@ -36,4 +36,4 @@ class PortfolioContainer extends Component {
         )
     }
 }
-export default PortfolioContainer;
+export default PortfolioSection;
