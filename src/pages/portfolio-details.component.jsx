@@ -2,11 +2,30 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/header/header.component';
 import Footer from '../components/footer/footer.component';
+import { useEffect } from 'react';
 
-import portfolioItemsData from '../components/portfolio-item.data';
+import { useLocation } from 'react-router-dom';
 
-class PortfolioDetails extends Component {
-  render() {
+// class PortfolioDetails extends Component {
+  const PortfolioDetails = () => {
+  const location = useLocation()
+  const { name, thumbnailUrl, date, liveUrl, description } = location.state
+  
+    // loads the bootstrap's template javascript
+    useEffect(() => {
+      const script = document.createElement('script');
+    
+      script.src = "./assets/js/main.js";
+      script.async = true;
+    
+      document.body.appendChild(script);
+    
+      return () => {
+        document.body.removeChild(script);
+      }
+    }, []);
+  
+  //render() {
     return (
       <>
         <Header/>
@@ -17,11 +36,11 @@ class PortfolioDetails extends Component {
               <div class="container">
 
                 <div class="d-flex justify-content-between align-items-center">
-                  <h2>{ portfolioItemsData[0].name }</h2>
+                  <h2>{ name }</h2>
                   <ol>
                     {/* used <a> over <link> so that Javascript can re-render on app.js's useEffect */}
                     <li><a href="/">Home</a></li>
-                    <li>{ portfolioItemsData[0].name }</li>
+                    <li>{ name }</li>
                   </ol>
                 </div>
 
@@ -39,19 +58,20 @@ class PortfolioDetails extends Component {
                       <div class="swiper-wrapper align-items-center">
 
                         <div class="swiper-slide">
-                          <img src="assets/img/portfolio/portfolio-crwn-clothing.png" alt=""/>
+                          <img src={ thumbnailUrl } alt=""/>
                         </div>
 
                         <div class="swiper-slide">
-                          <img src="assets/img/portfolio/portfolio-details-crwn-clothing-1.png" alt=""/>
+                          {/* <img src="assets/img/portfolio/portfolio-details-crwn-clothing-1.png" alt=""/> */}
+                          <img src={ thumbnailUrl.slice(0,thumbnailUrl.length-4) + "-1.png"} alt={ name }/>
                         </div>
 
                         <div class="swiper-slide">
-                          <img src="assets/img/portfolio/portfolio-details-crwn-clothing-2.png" alt=""/>
+                          <img src={ thumbnailUrl.slice(0,thumbnailUrl.length-4) + "-2.png"} alt={ name }/>
                         </div>
 
                         <div class="swiper-slide">
-                          <img src="assets/img/portfolio/portfolio-details-crwn-clothing-3.png" alt=""/>
+                          <img src={ thumbnailUrl.slice(0,thumbnailUrl.length-4) + "-3.png"} alt={ name }/>
                         </div>
 
                       </div>
@@ -64,13 +84,13 @@ class PortfolioDetails extends Component {
                       <h3>Project information</h3>
                       <ul>
                         <li><strong>Category</strong>: Web design</li>
-                        <li><strong>Project date</strong>{ portfolioItemsData[0].date }</li>
-                        <li><strong>Project URL</strong>: <a href={ portfolioItemsData[0].liveUrl} target="_blank" rel="noopener noreferrer">{ portfolioItemsData[0].name }</a></li>
+                        <li><strong>Project date</strong>{ date }</li>
+                        <li><strong>Project URL</strong>: <a href={ liveUrl} target="_blank" rel="noopener noreferrer">{ name }</a></li>
                       </ul>
                     </div>
                     <div class="portfolio-description">
-                      <h2>{ portfolioItemsData[0].name }</h2>
-                      <p>{ portfolioItemsData[0].description }</p>
+                      <h2>{ name }</h2>
+                      <p>{ description }</p>
                     </div>
                   </div>
 
@@ -84,6 +104,6 @@ class PortfolioDetails extends Component {
         <Footer/>
       </>
     )
-  }
+  // }
 }
 export default PortfolioDetails;

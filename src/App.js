@@ -26,6 +26,7 @@ function App() {
         {/* <Switch> */}
           <Route exact path='/' component={ HomePage } />
           <Route exact path='/portfolio-details' component={ PortfolioDetails } />
+          <Route path='/portfolio-details/:id' component={ PortfolioDetails } />
         {/* </Switch> */}
       </Router>
     </>
