@@ -3,6 +3,7 @@ const portfolioItemsData = [
         id: 1,
         name: "CRWN Clothing",
         thumbnailUrl: "assets/img/portfolio/portfolio-crwn-clothing.png",
+        imageCount: 4,
         moreDetailsUrl: "/portfolio-details",
         date: ": 27 August, 2021",
         liveUrl: "https://crwn-live-charlie-2021.herokuapp.com/",
@@ -12,10 +13,11 @@ const portfolioItemsData = [
         id: 2,
         name: "quote-generator",
         thumbnailUrl: "assets/img/portfolio/react-quote-generator.png",
+        imageCount: 1,
         moreDetailsUrl: "/portfolio-details",
-        date: ": 27 August, 2021",
-        liveUrl: "https://crwn-live-charlie-2021.herokuapp.com/",
-        description: "to-do"
+        date: ": 16 October, 2021",
+        liveUrl: "https://charlie-alonso-react-quote-generator.netlify.app/",
+        description: "Generates quotes using an api containing hundreds of random quotes. I learned how to fetch, and render, data from an api. Built with vanilla Javascript, then rebuilt using react."
     }
 ];
 
