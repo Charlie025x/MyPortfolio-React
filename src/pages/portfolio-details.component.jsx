@@ -1,4 +1,3 @@
-import Header from '../components/header/header.component';
 import Footer from '../components/footer/footer.component';
 import { useEffect } from 'react';
 
@@ -24,7 +23,6 @@ const PortfolioDetails = () => {
   
   return (
     <>
-      <Header/>
         <main id="main">
 
           {/* ======= Breadcrumbs ======= */}

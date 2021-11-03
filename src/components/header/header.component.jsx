@@ -15,7 +15,7 @@ class Header extends Component {
                     {/* <a href="#" className="facebook"><i className=""></i></a> */}
                     {/* <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a> */}
                     {/* <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a> */}
-                    <a href="https://www.linkedin.com/in/charlie-alonso-0308a4218/" target="_blank" rel="noopener noreferrer" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/charliealonso002/" target="_blank" rel="noopener noreferrer" className="linkedin"><i className="bx bxl-linkedin"></i></a>
                     <a href="https://github.com/Charlie025x" target="_blank" rel="noopener noreferrer" className="github"><i className='bx bxl-github'></i></a>
                   </div>
                 </div>
