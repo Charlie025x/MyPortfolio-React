@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Header from '../components/header/header.component';
 import Footer from '../components/footer/footer.component';
 import { useEffect } from 'react';
 
 import { useLocation } from 'react-router-dom';
 
-// class PortfolioDetails extends Component {
-  const PortfolioDetails = () => {
+const PortfolioDetails = () => {
   const location = useLocation()
   const { name, thumbnailUrl, imageCount, date, liveUrl, description } = location.state
   console.log(location.state)
@@ -25,60 +22,45 @@ import { useLocation } from 'react-router-dom';
       }
     }, []);
   
-  //render() {
-    return (
-      <>
-        <Header/>
-          <main id="main">
+  return (
+    <>
+      <Header/>
+        <main id="main">
 
-            {/* ======= Breadcrumbs ======= */}
-            <section id="breadcrumbs" class="breadcrumbs">
-              <div class="container">
+          {/* ======= Breadcrumbs ======= */}
+          <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
 
-                <div class="d-flex justify-content-between align-items-center">
-                  <h2>{ name }</h2>
-                  <ol>
-                    {/* used <a> over <link> so that Javascript can re-render on app.js's useEffect */}
-                    <li><a href="/">Home</a></li>
-                    <li>{ name }</li>
-                  </ol>
-                </div>
-
+              <div class="d-flex justify-content-between align-items-center">
+                <h2>{ name }</h2>
+                <ol>
+                  {/* used <a> over <link> so that Javascript can re-render on app.js's useEffect */}
+                  <li><a href="/">Home</a></li>
+                  <li>{ name }</li>
+                </ol>
               </div>
-            </section>{/* End Breadcrumbs */}
 
-            {/* ======= Portfolio Details Section ======= */}
-            <section id="portfolio-details" class="portfolio-details">
-              <div class="container">
+            </div>
+          </section>{/* End Breadcrumbs */}
 
-                <div class="row gy-4">
+          {/* ======= Portfolio Details Section ======= */}
+          <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
 
-                  <div class="col-lg-8">
-                    <div class="portfolio-details-slider swiper">
-                      <div class="swiper-wrapper align-items-center">
+              <div class="row gy-4">
 
-                        <div class={ imageCount != 1 ? "swiper-slide" : ''}>
-                          <img src={ thumbnailUrl } alt=""/>
-                        </div>
+                <div class="col-lg-8">
+                  <div class="portfolio-details-slider swiper">
+                    <div class="swiper-wrapper align-items-center">
 
-                        { imageCount === 4 ?
-                          <><div class="swiper-slide">
-                          
-                          <img src={ thumbnailUrl.slice(0,thumbnailUrl.length-4) + "-1.png"} alt={ name }/>
-                          </div>
+                      <div class={ imageCount !== 1 ? "swiper-slide" : ''}>
+                        <img src={ thumbnailUrl } alt=""/>
+                      </div>
 
-                          <div class="swiper-slide">
-                            <img src={ thumbnailUrl.slice(0,thumbnailUrl.length-4) + "-2.png"} alt={ name }/>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <img src={ thumbnailUrl.slice(0,thumbnailUrl.length-4) + "-3.png"} alt={ name }/>
-                          </div></>
-                          : ''
+                      { imageCount === 4 ?
+                        <><div class="swiper-slide">
                         
-                        }
-                        {/* <div class="swiper-slide">
-                          <img src={ thumbnailUrl.slice(0,thumbnailUrl.length-4) + "-1.png"} alt={ name }/>
+                        <img src={ thumbnailUrl.slice(0,thumbnailUrl.length-4) + "-1.png"} alt={ name }/>
                         </div>
 
                         <div class="swiper-slide">
@@ -87,38 +69,40 @@ import { useLocation } from 'react-router-dom';
 
                         <div class="swiper-slide">
                           <img src={ thumbnailUrl.slice(0,thumbnailUrl.length-4) + "-3.png"} alt={ name }/>
-                        </div> */}
+                        </div></>
+                        : ''
+                      
+                      }
 
-                      </div>
-                      <div class="swiper-pagination"></div>
                     </div>
+                    <div class="swiper-pagination"></div>
                   </div>
+                </div>
 
-                  <div class="col-lg-4">
-                    <div class="portfolio-info">
-                      <h3>Project information</h3>
-                      <ul>
-                        <li><strong>Category</strong>: Web design</li>
-                        <li><strong>Project date</strong>{ date }</li>
-                        <li><strong>Project URL</strong>: <a href={ liveUrl} target="_blank" rel="noopener noreferrer">{ name }</a></li>
-                      </ul>
-                    </div>
-                    <div class="portfolio-description">
-                      <h2>{ name }</h2>
-                      <p>{ description }</p>
-                    </div>
+                <div class="col-lg-4">
+                  <div class="portfolio-info">
+                    <h3>Project information</h3>
+                    <ul>
+                      <li><strong>Category</strong>: Web design</li>
+                      <li><strong>Project date</strong>{ date }</li>
+                      <li><strong>Project URL</strong>: <a href={ liveUrl} target="_blank" rel="noopener noreferrer">{ name }</a></li>
+                    </ul>
                   </div>
-
+                  <div class="portfolio-description">
+                    <h2>{ name }</h2>
+                    <p>{ description }</p>
+                  </div>
                 </div>
 
               </div>
-            </section> {/* End Portfolio Details Section */}
 
-          </main> {/* end main */}
+            </div>
+          </section> {/* End Portfolio Details Section */}
 
-        <Footer/>
-      </>
-    )
-  // }
+        </main> {/* end main */}
+
+      <Footer/>
+    </>
+  )
 }
 export default PortfolioDetails;
