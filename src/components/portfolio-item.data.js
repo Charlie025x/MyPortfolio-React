@@ -29,6 +29,16 @@ const portfolioItemsData = [
         liveUrl: "\\",
         description: "My portfolio built with a bootstrapmade.com template, iPortfolio. This project uses React.js's props to dynamicly change the portfolio-details page depending on which project's link was clicked."
     },
+    {
+        id: 4,
+        name: "Picture in Picture",
+        thumbnailUrl: "assets/img/portfolio/picture-in-picture.png",
+        imageCount: 1,
+        moreDetailsUrl: "/portfolio-details",
+        date: ": 12 November, 2021",
+        liveUrl: "https://charlie025x.github.io/Picture-in-Picture/",
+        description: "Utilizes the Screen Capture api to create a website that can create a picture in picture video stream of a pc screen, window, or even another chrome tab (works great for a tab playing a Youtube video!)."
+    },
 ];
 
 export default portfolioItemsData
