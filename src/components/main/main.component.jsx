@@ -23,7 +23,7 @@ class Main extends Component {
                 <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                     <h3>Front End Web Developer.</h3>
                     <p className="fst-italic">
-                    Hi, I'm a self-taught Front end Web Developer, born and raised in the state of Texas. For as far back as I can remember, I always loved makeing art and playing challenging games. Eventually I was introduced to web development, a profession that essientialy combines my two faviorite hobbies. Web Sites then became my canvas, VScode is my paint-brush, and programing became my faviorite game.
+                    Hi, I'm a self-taught Front end Web Developer, born and raised in the state of Texas. For as far back as I can remember, I always loved makeing art and playing challenging games. Eventually I was introduced to web development, a profession that essientialy combines my two favorite hobbies. Web Sites then became my canvas, VScode is my paint-brush, and programing became my favorite game.
                     <br/>
                     I finally found my calling.
                     </p>
@@ -144,6 +144,10 @@ class Main extends Component {
                     <h4>Complete React Developer in 2021</h4>
                     <p><em>Andrei Neagoie's Udemy Course</em></p> 
                     </div>
+                    <div className="resume-item">
+                    <h4>Associate's degree in interdisciplinary studies</h4>
+                    <p><em>South Texas College</em></p> 
+                    </div>
                 </div>
                 <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <h3 className="resume-title">Projects</h3>
@@ -194,7 +198,7 @@ class Main extends Component {
                     <div className="email">
                         <i className="bi bi-envelope"></i>
                         <h4>Email:</h4>
-                        <p>charliealonso002@example.com</p>
+                        <p>charliealonso002@gmail.com</p>
                     </div>
 
                     <div className="phone">
