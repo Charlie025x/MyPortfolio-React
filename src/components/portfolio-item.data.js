@@ -6,7 +6,7 @@ const portfolioItemsData = [
     imageCount: 4,
     moreDetailsUrl: "/portfolio-details",
     date: ": 27 August, 2021",
-    liveUrl: "https://crwn-live-charlie-2021.herokuapp.com/",
+    liveUrl: "https://crwn-clothing-2022-charliealonso.netlify.app/",
     description:
       "An E-commerce clothing store built on a React environment. The page has subdirectories for each category of clothes sold, shopping cart feature, utilizes Stripe api for payment processing, and handles user authentication through Firebase.",
   },
